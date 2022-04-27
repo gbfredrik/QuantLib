@@ -49,11 +49,14 @@ namespace QuantLib {
             QL_FAIL(" ublas representation is not implemented");
         }
 
+        // the Boost implementation of sparse matrices uses the deprecated std::iterator
+        QL_DEPRECATED_DISABLE_WARNING
         SparseMatrix toMatrix() const override {
             const std::vector<SparseMatrix> dcmp = toMatrixDecomp();
             return std::accumulate(dcmp.begin()+1, dcmp.end(),
                                    SparseMatrix(dcmp.front()));
         }
+        QL_DEPRECATED_ENABLE_WARNING
 
     };
 }
