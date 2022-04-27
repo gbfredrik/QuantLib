@@ -41,9 +41,11 @@
 #if BOOST_VERSION == 106400
 #include <boost/serialization/array_wrapper.hpp>
 #endif
+QL_DEPRECATED_DISABLE_WARNING
 #include <boost/numeric/ublas/vector_proxy.hpp>
 #include <boost/numeric/ublas/triangular.hpp>
 #include <boost/numeric/ublas/lu.hpp>
+QL_DEPRECATED_ENABLE_WARNING
 
 #if defined(QL_PATCH_MSVC)
 #pragma warning(pop)
