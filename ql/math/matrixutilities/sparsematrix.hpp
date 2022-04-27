@@ -47,7 +47,9 @@ FOR A PARTICULAR PURPOSE.  See the license for more details.
 #include <boost/serialization/array_wrapper.hpp>
 #endif
 
+QL_DEPRECATED_DISABLE_WARNING
 #include <boost/numeric/ublas/matrix_sparse.hpp>
+QL_DEPRECATED_ENABLE_WARNING
 
 #if defined(QL_PATCH_MSVC)
 #pragma warning(pop)
